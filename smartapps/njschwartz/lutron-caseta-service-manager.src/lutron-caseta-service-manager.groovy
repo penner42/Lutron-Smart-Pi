@@ -113,9 +113,10 @@ def managepicos() {
     }
 
     return dynamicPage(name: "managepicos", title: "", install: false) {
+    	
         section("") {
             picos.each {
-                input "pico"+it.key, "enum", required: false, title:it.name, multiple: true, options:[1,2]
+                input "pico"+it.key, "capability.switch", multiple:true, required: false, title:it.value.name
             }
         }
     }
