@@ -96,10 +96,19 @@ def switchDiscovery() {
 
         section("Pico's") {
             input "selectedPicos", "enum", required:false, title:"Select Pico's \n(${picoOptions.size() ?: 0} found)", multiple:true, options:picoOptions, image: "https://cdn.rawgit.com/njschwartz/Lutron-Smart-Pi/master/resources/images/LutronCasetaPico.png"
+            href(name:"managepicos", page:"managepicos", title:"", description: "Manage Picos")
         }
         section {
         	paragraph "Please note that if you do not have a Pro Hub you cannot use your Pico's to control devices in ST and thus you should ignore this section. Selecting Picos with a standard hub will simply add a useless device into ST."
    		 }
+    }
+}
+
+def managepicos() {
+    dynamicPage(name: "managepicos", title: "", install: false) {
+        section("") {
+            paragraph "test"
+        }
     }
 }
 
