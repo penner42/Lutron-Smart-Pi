@@ -58,6 +58,19 @@ def parse(description) {
 def buttonEvent(button) {
 	button = button as Integer
     log.debug "In button event " + button
+	def settingId = "pico" + device.deviceNetworkId
+    def settingDevices = parent.settings[settingId] ?: []
+    settingDevices.each {
+    	log.debug it
+	    switch(button) {
+    		case 1:
+            	it.on()
+                break
+            case 2:
+            	it.off()
+                break
+		}
+	}
     createEvent(name: "button", value: "pushed", data: [buttonNumber: button], descriptionText: "$device.displayName button $button was pushed", isStateChange: true)
 }
 
