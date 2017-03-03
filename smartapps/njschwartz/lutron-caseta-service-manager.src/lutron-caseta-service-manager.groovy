@@ -34,6 +34,7 @@ preferences {
     page(name:"piDiscovery", title:"Raspberry Pi Discover", content:"piDiscovery")
     page(name:"switchDiscovery", title:"Lutron Device Setup", content:"switchDiscovery")
     page(name:"sceneDiscovery", title:"Lutron Scene Setup", content:"sceneDiscovery")
+    page(name:"managepicos", title:"Manage Picos", content:"mangagepicos")
 }
 
 def mainPage() {
