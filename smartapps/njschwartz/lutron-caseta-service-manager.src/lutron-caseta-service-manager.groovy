@@ -106,7 +106,7 @@ def switchDiscovery() {
 }
 
 def managepicos() {
-    dynamicPage(name: "managepicos", title: "", install: false) {
+    return dynamicPage(name: "managepicos", title: "", install: false) {
         section("") {
             paragraph "test"
         }
